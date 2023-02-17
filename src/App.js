@@ -77,7 +77,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl:this.state.input})
-  fetch('https://calm-eyrie-99142.herokuapp.com/imageurl', {
+  fetch('https://smart-brain-api-bev9.onrender.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -88,7 +88,7 @@ onButtonSubmit = () => {
 
   .then(response => {
     if(response){
-      fetch('https://calm-eyrie-99142.herokuapp.com/image', {
+      fetch('https://smart-brain-api-bev9.onrender.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json' },
         body: JSON.stringify({
